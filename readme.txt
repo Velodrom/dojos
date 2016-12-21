@@ -1,6 +1,6 @@
 Implement a digital FIR filter of the form
 
-y[n] = Sum_{1,k}(h[k]*x[n-k]),
+y[n] = Sum_{0,k-1}(h[k]*x[n-k]),
 
 where k=4 is the filter length.
 The filter coefficients are h=[0.5, 0.3, 0.2, 0.1]
