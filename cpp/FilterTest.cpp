@@ -16,7 +16,7 @@ TEST(FilterTest, ZeroInput)
 {
     vector<float> input     = {0};
     vector<float> output    = FirFilter(input);
-    vector<float> refOutput = {0};
+    vector<float> refOutput = {0, 0, 0, 0};
 
     ASSERT_TRUE(CompareVectors(refOutput, output));
 }
