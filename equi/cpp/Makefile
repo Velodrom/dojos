@@ -28,7 +28,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread -std=c++0x
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = FilterTest
+TESTS = runut
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -66,12 +66,9 @@ gtest.a : gtest-all.o
 gtest_main.a : gtest-all.o gtest_main.o
 	$(AR) $(ARFLAGS) $@ $^
 
-#sample1.o : $(USER_DIR)/sample1.cc $(USER_DIR)/sample1.h $(GTEST_HEADERS)
-#	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/sample1.cc
+EquiTest.o : $(USER_DIR)/EquiTest.cpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/EquiTest.cpp -I$(COMMON_CODE)
 
-FilterTest.o : $(USER_DIR)/FilterTest.cpp $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/FilterTest.cpp -I$(COMMON_CODE)
-
-FilterTest : FilterTest.o gtest_main.a
+runut : EquiTest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
-	./FilterTest
+	./runut
