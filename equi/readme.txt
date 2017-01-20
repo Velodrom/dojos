@@ -1,4 +1,4 @@
-Implement a function that find any of the equilibrium indices of an array A.
+Implement a function that finds any of the equilibrium indices of an array A.
 
 Equilibrium index of an array A of length N is defined as the number P
 (0 <= P < N) such that the sum of all elements before P equal to the sum of
