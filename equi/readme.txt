@@ -22,7 +22,7 @@ A[2] = 4
 A[3] = -2
 A[4] = 1
 
-P = 0 is an equilibrium index because there are no elements lower than 0, and
+P = 0 is an equilibrium index because there are no elements before A[0], and
 A[] = 0 = A[1] + A[2] + A[3] + A[4]
 
 P = 2 is an equilibrium index because
